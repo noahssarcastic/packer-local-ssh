@@ -31,7 +31,7 @@
       "type": "shell-local",
       "inline": [
         "echo '{{build `SSHPrivateKey`}}' > ./packer-session.pem",
-        "inspec exec ./profile --target ssh://{{build `User`}}@${{build `Host`}} --key-files ./packer-session.pem"
+        "inspec exec ./profile --target ssh://{{build `User`}}@{{build `Host`}} --key-files ./packer-session.pem"
       ]
     }
   ]
